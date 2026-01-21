@@ -97,6 +97,21 @@ WidgetMetadata = {
           { title: "Popularity", value: "popularity.desc" }, { title: "Rating", value: "vote_average.desc" },
           { title: "First Air Date", value: "first_air_date.desc" }]},
         { name: "page", title: "Page", type: "page" }, { name: "language", title: "Language", type: "language", value: "en-US" }]},
+    { id: "spanishNetworks", title: "Spanish Networks", functionName: "spanishNetworks", params: [
+        { name: "with_networks", title: "Network", type: "enumeration", enumOptions: [
+          { title: "━━━ Major Networks ━━━", value: "" },
+          { title: "Univision", value: "1390" }, { title: "Telemundo", value: "218" }, { title: "UniMás", value: "2300" },
+          { title: "Estrella TV", value: "2739" }, { title: "Universo", value: "2739" },
+          { title: "━━━ Entertainment ━━━", value: "" },
+          { title: "Galavisión", value: "1771" }, { title: "TeleXitos", value: "3481" },
+          { title: "LATV", value: "3020" }, { title: "HITN", value: "2684" },
+          { title: "━━━ Sports ━━━", value: "" },
+          { title: "ESPN Deportes", value: "1467" }, { title: "FOX Deportes", value: "2227" },
+          { title: "TUDN", value: "2739" }]},
+        { name: "sort_by", title: "Sort By", type: "enumeration", enumOptions: [
+          { title: "Popularity", value: "popularity.desc" }, { title: "Rating", value: "vote_average.desc" },
+          { title: "First Air Date", value: "first_air_date.desc" }]},
+        { name: "page", title: "Page", type: "page" }, { name: "language", title: "Language", type: "language", value: "en-US" }]},
     { id: "superAdvanced", title: "🔬 Super Advanced", functionName: "superAdvanced", params: [
         { name: "type", title: "Type", type: "enumeration", enumOptions: [{ title: "Movie", value: "movie" }, { title: "TV Show", value: "tv" }]},
         { name: "year_from", title: "Year From", type: "input", value: "", description: "e.g., 2020" },
@@ -354,6 +369,16 @@ async function keywords(params) {
   };
 
   return await fetchData(api, queryParams, type);
+}
+
+async function usaNetworks(params) {
+  const api = `discover/tv`;
+  return await fetchData(api, params, "tv");
+}
+
+async function spanishNetworks(params) {
+  const api = `discover/tv`;
+  return await fetchData(api, params, "tv");
 }
 
 // NEW: Movie collections
