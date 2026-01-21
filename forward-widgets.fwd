@@ -1,0 +1,16 @@
+{  
+  "title": "Your Widgets",  
+  "description": "Collection of widgets",  
+  "icon": "https://example.com/icon.png",  
+  "widgets": [  
+    {  
+      "id": "your.widget.id",  
+      "title": "Widget Title",  
+      "description": "Description",  
+      "requiredVersion": "0.0.1",  
+      "version": "1.0.0",  
+      "author": "xeroosterpro",  
+      "url": "https://raw.githubusercontent.com/xeroosterpro/Forward/main/your-widget.js"  
+    }  
+  ]  
+}  
